@@ -1,0 +1,13 @@
+.date {
+    font-size: 30px;
+    /* background: linear-gradient(326deg, rgba(232,255,0,1) 0%, rgba(254,255,177,1) 28%, rgba(255,255,255,1) 46%, rgba(207,82,255,1) 70%, rgba(160,0,255,1) 92%); */
+}   
+.hours {
+    color: red;
+}
+.minutes {
+    color: yellowgreen;
+}
+.seconds {
+    color: royalblue;
+}
