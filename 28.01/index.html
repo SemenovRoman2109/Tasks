@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // Задаем url адрес с которого будем брать данные
+        const url = 'https://api.nasa.gov/planetary/apod?api_key=Jur1b1xkKOkenNuro0eVFrchFmdM932ZhH6bPT91';
+        // Получаем данные по нужному url адрусу и записываем их в переменную data-
+        const data = fetch(url)
+        // при помощи then выполняем код в правельной последовательности 
+        .then( (response) => response.json() ) 
+        .then( (data) => {
+            // Создаем все обекты при помощи createElement
+            const title = document.createElement("h1");
+            const img = document.createElement("img");
+            const explanation = document.createElement("p");
+            const date = document.createElement("h3");
+            // Задаем обектам нужные свойства и их значения которые мы взяли из даты
+            title.innerHTML = data["title"];
+            img.src = data["hdurl"];            
+            explanation.innerHTML = data["explanation"];           
+            date.innerHTML = data["date"];
+            // Добавляем все обекты в body
+            document.body.append(title);
+            document.body.append(date);
+            document.body.append(explanation);
+            document.body.append(img);       
+        } )
+    </script>
+</body>
+</html>
