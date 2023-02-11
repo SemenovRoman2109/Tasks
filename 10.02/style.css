@@ -1,0 +1,39 @@
+*{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(67,248,255,1) 0%, rgba(4,82,0,1) 18%, rgba(230,224,32,1) 38%, rgba(6,145,168,1) 54%, rgba(255,255,255,1) 63%, rgba(121,0,164,1) 74%, rgba(255,145,0,1) 100%);
+}
+.content {
+    width: 500px;
+    font-size: 25px;
+    margin: auto;
+}
+
+#arrowTop {
+    color: red;
+    font-size: 45px;
+    /* Вам нужно установить определенное позиционирование стрелочке, которое при прокрутке страницы не меняло свое положение! */
+    position: fixed; 
+    top: 10px;
+    left: 10px;
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+}
+#arrowDown {
+    color: red;
+    font-size: 45px;
+    /* Вам нужно установить определенное позиционирование стрелочке, которое при прокрутке страницы не меняло свое положение! */
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+}
