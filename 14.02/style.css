@@ -1,0 +1,48 @@
+* {
+    /* Почему не добавили box-sizing: border-box? - потомучто в таком случие border был бы не вокруг клеток а находился бы прямо внутри них и от него небыло бы смысла */
+    padding: 0;
+    margin: 0;
+
+}
+html, body {
+    /* vh - это относительный размер не от клаасса родителя а от страници */
+    height: 100vh;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction - это направление в котором будут распологаться обекты внутри данного обекта  */
+    flex-direction: column;
+}
+.maze-field {
+    width: 475px;
+    height: 500px;
+    border: 5px solid black; 
+    /* Почему мы ставим position: relative? - чтоб работал position absolute для клеток */ 
+    position: relative;
+}
+.maze-block {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    /* Почему мы ставим position: absolute? чтоб клетки правельно распологались по заданым нами top и left */
+    position: absolute;
+}
+#player {
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    /* Почему мы ставим position: absolute?  чтоб клетки правельно распологались по заданым нами top и left */
+    position: absolute;
+    
+}
+.finish {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    /* Почему мы ставим position: absolute?  чтоб клетки правельно распологались по заданым нами top и left */
+    position: absolute;
+}
